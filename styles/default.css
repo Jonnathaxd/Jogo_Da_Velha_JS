@@ -1,11 +1,13 @@
 body {
-  background-color: rgba(0, 0, 0, 0.37);
+  background-image: url('../images/galaxy3.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   text-align: center;
-  height: 100%;
+  ;
 }
 #container {
   display: flex;
-  flex-direction: row;
   flex-flow: row wrap;
   justify-content: center;
   align-content: center;
@@ -32,6 +34,8 @@ h1 {
   background-color: white;
   box-shadow: 2px 2px 6px black;
   margin: 2px;
+  cursor: pointer;
+  border-radius: 0.2rem;
 }
 
 .x::after {
