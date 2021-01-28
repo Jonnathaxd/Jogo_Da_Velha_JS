@@ -6,13 +6,19 @@ window.onload = () => {
   });
 
   function handleClick(e) {
-    let square = e.target;
-    let position = square.id;
-    if (table[position] == "") {
-      handleMove(position);
+    if (jogo_on) {
+      let square = e.target;
+      let position = square.id;
+      if (table[position] == "") {
+        handleMove(position);
 
-      square.innerHTML = `<div class='${table[position]}'></div>`;
-      chekingGame()
+        square.innerHTML = `<div class='${table[position]}'></div>`;
+        chekingGame();
+      }
+    } else {
+      alert(
+        "Partida finalizada, reinicie a partida!"
+      );
     }
   }
 };
