@@ -14,6 +14,9 @@
   </head>
   <body>
     <div id="container">
+      <div id='score'>
+        
+      </div>
       <h1>JOGO DA VELHA ESPACIAL</h1>
       <div id="stage">
         <div>
@@ -32,14 +35,15 @@
           <div id="8" class="square"></div>
         </div>
       </div>
+      <button class='reiniciar' onclick='beginning()'>Reiniciar</button>
       <div id="menu">
         <button class="bg-1" onclick="play_alone()">1 Jogador</button>
         <button class="bg-2" onclick="play_with_friend()">2 Jogadores</button>
       </div>
       <div>
         <form action="" id='players'>
-          <div>Jogador 1 (Sol)<input type="text" id="sun" placeholder="Digite o nome do jogador 1"/></div>
-          <div>Jogador 2 (Lua)<input type="text" id="moon" placeholder="Digite o nome do jogador 2" /></div>
+          <div>Jogador 1 (Sol)<input type="text" id="sun" name='sun' placeholder="Digite o nome do jogador 1"/></div>
+          <div>Jogador 2 (Lua)<input type="text" id="moon" name='moon' placeholder="Digite o nome do jogador 2" /></div>
           <button type='button' onclick='start()'>
             Jogar
           </button>

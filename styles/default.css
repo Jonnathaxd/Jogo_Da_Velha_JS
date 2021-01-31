@@ -29,6 +29,7 @@ h1 {
 
 #stage {
   display: none;
+  width: 100%;
 }
 .square {
   position: relative;
@@ -40,6 +41,26 @@ h1 {
   margin: 2px;
   cursor: pointer;
   border-radius: 0.2rem;
+}
+
+#stage + button {
+    display: none;
+    width: 15%;
+    height: 5rem;
+    align-self: center;
+    color: white;
+    background-color: black;
+    font-family: "Press Start 2P", cursive;
+    cursor: pointer;
+    border-radius: 1rem;
+    letter-spacing: 1px;
+    transition: 0.6s;
+}
+#stage + button:hover {
+  background-color: rgba(0, 0, 0, 0.363);
+  animation-name: button-move;
+  animation-duration: 0.3s;
+  animation-iteration-count: infinite;
 }
 
 #menu {
@@ -54,8 +75,6 @@ h1 {
   font-family: "Press Start 2P", cursive;
   font-weight: bolder;
   
-  
-  
   border: none;
   border-radius: 1.4rem;
   cursor: pointer;
@@ -64,8 +83,6 @@ h1 {
   transition: .4s;
   background-image: linear-gradient(rgba(0, 0, 0, 0.247), white);
   color: black;
-  
-
 
 }
 

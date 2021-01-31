@@ -1,4 +1,5 @@
 window.onload = () => {
+  beginning()
   let squares = document.querySelectorAll(".square");
 
   squares.forEach((square) => {
@@ -11,7 +12,6 @@ window.onload = () => {
       let position = square.id;
       if (table[position] == "") {
         handleMove(position);
-
         square.innerHTML = `<div class='${table[position]}'></div>`;
         chekingGame();
       }
