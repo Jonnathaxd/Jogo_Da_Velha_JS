@@ -1,12 +1,12 @@
 body {
-  background-image: url('../images/galaxy.jpg');
+  background-image: url("../images/galaxy.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
   overflow: hidden;
-  
 }
+
 #container {
   display: flex;
   flex-flow: row wrap;
@@ -31,6 +31,7 @@ h1 {
   display: none;
   width: 100%;
 }
+
 .square {
   position: relative;
   display: inline-block;
@@ -44,22 +45,31 @@ h1 {
 }
 
 #stage + button {
-    display: none;
-    width: 15%;
-    height: 5rem;
-    align-self: center;
-    color: white;
-    background-color: black;
-    font-family: "Press Start 2P", cursive;
-    cursor: pointer;
-    border-radius: 1rem;
-    letter-spacing: 1px;
-    transition: 0.6s;
+  display: none;
+  width: max(20vw, 10rem);
+  height: 5rem;
+  align-self: center;
+  color: white;
+  background-color: black;
+  font-family: "Press Start 2P", cursive;
+  cursor: pointer;
+  border-radius: 1rem;
+  letter-spacing: 1px;
+  transition: 0.6s;
 }
 #stage + button:hover {
   background-color: rgba(0, 0, 0, 0.363);
   animation-name: button-move;
   animation-duration: 0.3s;
+  animation-iteration-count: infinite;
+}
+
+[win] {
+  border: 5px solid rgba(0, 0, 0, 0.288);
+  box-sizing: border-box;
+  background-color: rgb(0, 128, 0);
+  animation-name: win-button-move;
+  animation-duration: 0.7s;
   animation-iteration-count: infinite;
 }
 
@@ -74,16 +84,15 @@ h1 {
   font-size: 1.3rem;
   font-family: "Press Start 2P", cursive;
   font-weight: bolder;
-  
+
   border: none;
   border-radius: 1.4rem;
   cursor: pointer;
 
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.411);
-  transition: .4s;
+  transition: 0.4s;
   background-image: linear-gradient(rgba(0, 0, 0, 0.247), white);
   color: black;
-
 }
 
 #menu button + button {
@@ -91,13 +100,13 @@ h1 {
 }
 
 .bg-1 {
-  background-color: #AA7039;
+  background-color: #aa7039;
 }
 
 .bg-1:hover {
   animation-name: button-move;
   animation-duration: 0.3s;
-  background-color: #CD9E72;
+  background-color: #cd9e72;
 }
 
 .bg-2 {
@@ -107,12 +116,13 @@ h1 {
 .bg-2:hover {
   animation-name: button-move;
   animation-duration: 0.3s;
-  background-color: #BDAA98;
-  
+  background-color: #bdaa98;
 }
+
 #players {
   display: none;
 }
+
 #players div {
   background-color: rgba(255, 255, 255, 0.555);
   font-size: 2rem;
@@ -122,14 +132,14 @@ h1 {
   padding: 1rem;
   border-radius: 1rem;
   box-shadow: 0 0 3px black;
-  
 }
+
 #players input {
   width: 85%;
   height: 3rem;
   font-size: 1.2rem;
   margin: 0.5rem 0;
-  
+
   padding: 1rem;
   box-sizing: border-box;
 }
@@ -140,14 +150,13 @@ h1 {
   font-size: 1.3rem;
   font-family: "Press Start 2P", cursive;
   font-weight: bolder;
-  
-  
+
   border: none;
   border-radius: 1.4rem;
   cursor: pointer;
 
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.411);
-  transition: .4s;
+  transition: 0.4s;
   background-image: linear-gradient(rgba(0, 0, 0, 0.247), white);
   color: black;
   margin-top: 1rem;

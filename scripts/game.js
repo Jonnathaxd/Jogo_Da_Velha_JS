@@ -26,6 +26,7 @@ function beginning(){
   let squares = document.querySelectorAll('[class="square"]')
   squares.forEach((e) =>{
     e.innerHTML = ''
+    e.removeAttribute('win')
   })
 }
 
@@ -56,6 +57,10 @@ function chekingGame() {
         table[pos1] != ""
       ) {
         jogo_on = false;
+        let squares_win = document.getElementsByClassName('square')
+        squares_win[pos1].setAttribute('win', '')
+        squares_win[pos2].setAttribute('win', '')
+        squares_win[pos3].setAttribute('win', '')
         setTimeout(() => {
           let winner = playerTime == 0 ? player1: player2
           alert(`${winner} ganhou essa partida :D`);
